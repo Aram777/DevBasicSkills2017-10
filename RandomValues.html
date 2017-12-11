@@ -3,6 +3,45 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function Gnfunc() {
+            // window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer");
+
+            chart.options.title = {
+                text: "Random Number Distribution Between 1-100"
+            };
+
+            var series1 = { //dataSeries - first quarter
+                type: "column",
+                name: "Random number distribution",
+                showInLegend: true
+            };
+            let maxloop=document.getElementById("repTime").value;
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            var randnumclass = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            var randnumclasslabel = ["1-10", "11-20", "21-30", "31-40", "41-50", "51-60", "61-70", "71-80", "81-90",
+                "91-100"
+            ];
+            for (let index = 0; index < maxloop; index++) {
+                let xxx = Math.floor((Math.random() * 100) + 1);
+                randnumclass[Math.floor(xxx / 10) - 1]++;
+
+            }
+            series1.dataPoints = [];
+            for (let index = 0; index < randnumclass.length; index++) {
+                series1.dataPoints.push({
+                    label: randnumclasslabel[index],
+                    y: randnumclass[index]
+                });
+
+            }
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 </head>
 
 <body>
@@ -17,14 +56,25 @@
     </div>
     <div class="right_">
         <div class="topDesc">
-                <div style="text-align: center;">
-                        <h1>
-                            Random Values
-                        </h1>
-                        <p>write some things here</p>
-                    </div>
-                        </div>
+            <div style="text-align: center;">
+                <h1>
+                    Random Values
+                </h1>
+                <p>write some things here</p>
+            </div>
+        </div>
         <div class="downhome">
+            <div style="text-align : center; margin-bottom: 30px; margin-top: 30px;">
+
+                <div style="display: inline-block; ">
+                    <label class="lbltxt">Generate random numbers between 1-100 for</label>
+                    <input style="width: 50px" type="number" id="repTime" value="100">
+                    <label class="lbltxt">Times</label>
+                    <button onclick="Gnfunc()">Generate Random Numbers</button>
+                </div>
+            </div>
+            <div id="chartContainer" style="height: 300px; width: 100%;">
+            </div>
 
         </div>
 
