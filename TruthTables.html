@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        td {
+            
+            border: 1px solid black;
+        }
+
+    </style>
+    <script src="TruthTables.js"></script>
+
+
+</head>
+
+<body>
+    <div class="left_">
+        <div class="tophome">
+            <button class="buttonhome" onclick="window.location.href='index.html'">HOME</button>
+        </div>
+        <div class="downhome">
+            <img src="Group10.jpg" width="90%" height="70%" />
+        </div>
+
+    </div>
+    <div class="right_">
+        <div class="topDesc">
+            <div style="text-align: center;">
+                <h1>
+                    Truth Table
+                </h1>
+                <p> A truth table is a logically-based mathematical table that illustrates the possible outcomes of a scenario.
+                    <br> The table below helps visualize whether an argument is logical(true) or logical (false).
+                    <br>Instructions: Users must use "and", "or", "not" and "()" to use this table.</p>
+            </div>
+
+
+        </div>
+        <div class="downhome">
+            <div style="text-align: center; margin-top: 20px;">
+                <label>Find:</label>
+                <input type="text" id="frmtxt" value="(p and q) or not r" style="height: 30px; font-size: 16px;">
+                <button id="CalcTru" onclick="clcfunc()" style="height: 30px;font-size: 16px;"> calculate </button>
+                <table align="center" id="truTable">
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

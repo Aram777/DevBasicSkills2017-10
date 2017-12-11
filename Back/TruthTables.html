@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="truth.css">
+    <title>Truth Tables</title>
+    <h1>
+        <b>TRUTH TABLES </b>
+    </h1>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="trufuncs.js"></script>
+    <h2>
+        <p> A truth table is a logically-based mathematical table that illustrates the possible outcomes of a scenario.
+            <br> The table below helps visualize whether an argument is logical(true) or logical (false).
+            <br>Instructions: Users must use "and", "or", "not" and "()" to use this table.</p>
+        <br>
+    </h2>
+    <div class="container">
+        <div class="input_group">
+            <div class="mine">
+                <label>Find:</label>
+            </div>
+            <div>
+                <input type="text" id="frmtxt" value="(p and q) or not r">
+                <button id="CalcTru" onclick="clcfunc()"> calculate </button>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="mumin">
+        <table id="truTable" >
+        </table>
+    </div>
+
+
+</body>
+
+</html>

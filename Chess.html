@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="Chess.js">
+    </script>
+    <style>
+        #divback {
+            background-image: url("knight.jpg");
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body onload="createtable()">
+    <div class="left_">
+        <div class="tophome">
+            <button class="buttonhome" onclick="window.location.href='index.html'">HOME</button>
+        </div>
+        <div class="downhome">
+            <img src="Group10.jpg" width="90%" height="70%" />
+        </div>
+
+    </div>
+    <div class="right_">
+        <div class="topDesc">
+            <div style="text-align: center;">
+                <h1>
+                    Knight move on chess
+                </h1>
+                <p>Click on the one of the board cell to see how a knight starts moving there to the end!!</p>
+            </div>
+        </div>
+        <div class="downhome">
+            <div style="text-align: center; margin-top: 20px;">
+                <div id="divback">
+                    <table align="center" id="ChesBoard">
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

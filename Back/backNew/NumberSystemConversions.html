@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #divR {
+            float: left;
+            width: 50%;
+        }
+
+        #divL {
+            float: left;
+            width: 50%
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="NumberSystemConversions.js"></script>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    
+    <div id="divR">
+        <div>
+            Decimal Number
+            <input type="text" id="Decn" name="txtdec" disabled>
+            <br> Hexadecimal Number
+            <input type="text" id="HDecn" name="txthex" disabled>
+            <br> Octal Number
+            <input type="text" id="Octn" name="txtoct" disabled>
+            <br> Binery Number
+            <input type="text" id="Binn" name="txtbin" disabled>
+            <br>
+
+
+        </div>
+
+    </div>
+    <div id="divL">
+        <div>
+            <input type="radio" name="NumSystem" id="sysChk1" value="DEC" checked="checked" onclick="disbut(0)"> Decimal
+            <input type="radio" name="NumSystem" id="sysChk2" value="HEX" onclick="disbut(1)"> Hexadecimal
+            <input type="radio" name="NumSystem" id="sysChk3" value="OCT" onclick="disbut(2)"> Octal
+            <input type="radio" name="NumSystem" id="sysChk4" value="BIN" onclick="disbut(3)"> Binery
+
+        </div>
+        <br>
+        <div>
+            <button id="btnA" disabled onclick="myFunction('A')"> A </button>
+            <button id="btnB" disabled onclick="myFunction('B')"> B </button>
+            <button id="btn7" onclick="myFunction('7')"> 7 </button>
+            <button id="btn8" onclick="myFunction('8')"> 8 </button>
+            <button id="btn9" onclick="myFunction('9')"> 9 </button>
+
+        </div>
+        <br>
+        <div>
+            <button id="btnC" disabled onclick="myFunction('C')"> C </button>
+            <button id="btnD" disabled onclick="myFunction('D')"> D </button>
+            <button id="btn4" onclick="myFunction('4')"> 4 </button>
+            <button id="btn5" onclick="myFunction('5')"> 5 </button>
+            <button id="btn6" onclick="myFunction('6')"> 6 </button>
+
+        </div>
+        <br>
+        <div>
+            <button id="btnE" disabled onclick="myFunction('E')"> E </button>
+            <button id="btnF" disabled onclick="myFunction('F')"> F </button>
+            <button id="btn1" name="btnNumbers" onclick="myFunction('1')"> 1 </button>
+            <button id="btn2" name="btnNumbers" onclick="myFunction('2')"> 2 </button>
+            <button id="btn3" name="btnNumbers" onclick="myFunction('3')"> 3 </button>
+
+        </div>
+        <br>
+        <div>
+            <button id="btn0" onclick="myFunction('0')"> 0 </button>
+            <button id="btnClr" onclick="ClsFunction()"> Clear </button>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

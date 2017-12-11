@@ -1,0 +1,76 @@
+#header{
+    position:relative;
+    transition: .5s ease;
+    font-size: 16px;
+    
+}
+#btns
+{
+    position: fixed;
+    width: 150px;
+    height: 150px;
+
+}
+#btnCalc {
+    top: 100px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+#btnNSC {
+    top: 100px;
+    left: 400px;
+}
+#btnNSO {
+    position:absolute;
+    transition: .5s ease;
+    top: 100px;
+    left: 700px;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+}
+#btnCOMB {
+    position:absolute;
+    transition: .5s ease;
+    top: 300px;
+    left: 250px;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+}
+#btnTRTB {
+    position:absolute;
+    transition: .5s ease;
+    top: 300px;
+    left: 850px;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+}
+#btnRND {
+    position:absolute;
+    transition: .5s ease;
+    top: 500px;
+    left: 400px;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+}
+#btnCHESS {
+    position:absolute;
+    transition: .5s ease;
+    top: 500px;
+    left: 700px;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+}
+#divR {
+    float: left;
+    width: 50%;
+}
+#divL{
+    float: left;
+    width: 50%
+}

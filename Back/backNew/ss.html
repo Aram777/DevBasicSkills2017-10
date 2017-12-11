@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    table{
+      align-self: auto;
+    }
+      table,
+      td {
+          border: 1px solid black;
+          text-align: right;
+      }
+  </style>
+
+  <script>
+    function clearTable() {
+      while (document.getElementById("NumberTable").rows.length > 0) {
+        document.getElementById("NumberTable").deleteRow(0);
+      }
+
+    }
+
+    function createtable() {
+      clearTable();
+      var table = document.getElementById("NumberTable");
+      var row = table.insertRow(0);
+      var cell = row.insertCell(0);
+      cell.innerHTML = "Decimal Number";
+      cell = row.insertCell(1);
+      cell.innerHTML = "HexDecimal Number";
+      cell = row.insertCell(2);
+      cell.innerHTML = "Octal Number";
+      cell = row.insertCell(3);
+      cell.innerHTML = "BinaryNumber";
+
+      for (let rowIndex = 1; rowIndex < 51; rowIndex++) {
+        row = table.insertRow(rowIndex);
+        cell = row.insertCell(0);
+        cell.innerHTML = rowIndex.toString();
+        cell = row.insertCell(1);
+        cell.innerHTML = rowIndex.toString(16).toUpperCase();
+        cell = row.insertCell(2);
+        cell.innerHTML = rowIndex.toString(8)
+        cell = row.insertCell(3);
+        cell.innerHTML = rowIndex.toString(2)
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="left_">
+    <div class="tophome">
+      <button class="buttonhome" onclick="window.location.href='index.html'">HOME</button>
+    </div>
+    <div class="downhome">
+      <img src="Group10.jpg" width="90%" height="70%" />
+    </div>
+
+  </div>
+  <div class="right_">
+<div class="tophome">
+  <p>Description</p>
+</div>
+<div class="downhome">
+
+  
+    <button id="btnCreat" onclick="createtable()"> Create Table </button>
+    <button id="btnClear" onclick="clearTable()"> Clear Table </button>
+    <br>
+
+
+    <table id="NumberTable">
+    </table>
+    <br>
+</div>
+
+
+  
+  </div>
+
+</body>
+
+</html>
