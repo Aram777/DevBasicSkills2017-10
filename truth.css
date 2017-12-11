@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 body{
@@ -44,3 +45,43 @@ td
 {
     display: flex; /* or inline-flex */
 }
+=======
+
+
+body{
+    font-family: "Barlow", sans-serif;
+   text-align: center;
+    color: green;
+
+}
+table {
+    margin-left: auto;
+margin-right: auto;
+}
+th
+{
+ background-color: black;
+ color: blueviolet;
+ font-size: 25px;
+ padding-top: 5px; 
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 5px; 
+}
+td
+{
+    border: none;
+    padding-top: 5px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px; 
+}
+container {
+    width: 100px;
+    clear: both;
+}
+.container input {
+    width: 100px;
+    clear: both;
+}
+>>>>>>> bbfb34e505d0bbca6748543626e770585b5c6215
