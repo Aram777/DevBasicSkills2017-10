@@ -2,114 +2,116 @@
 <html>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<style>
-		.divbutton {
-			height: 80%;
-		}
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .divbutton {
+            height: 80%;
+        }
 
-		.divdesc {
-			height: 20%;
-			display: none;
-		}
+        .divdesc {
+            height: 20%;
+            display: none;
+        }
 
 
-		#titldesc {
-			background-color: #666666;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			background-clip: text;
-			color: transparent;
-			text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
-			font-family: 'Archivo Black', sans-serif;
-			font-size: 60px;
-		}
+        #titldesc {
+            background-color: #666666;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 60px;
+        }
 
-		#but1 {
-			position: absolute;
-			top: 10px;
-			left: 400px;
-		}
+        #but1 {
+            position: absolute;
+            top: 10px;
+            left: 400px;
+        }
 
-		#but2 {
-			position: absolute;
-			top: 10px;
-			left: 600px;
-		}
+        #but2 {
+            position: absolute;
+            top: 10px;
+            left: 600px;
+        }
 
-		#but3 {
-			position: absolute;
-			top: 160px;
-			left: 250px;
-		}
+        #but3 {
+            position: absolute;
+            top: 160px;
+            left: 250px;
+        }
 
-		#but4 {
-			position: absolute;
-			top: 160px;
-			left: 750px;
-		}
+        #but4 {
+            position: absolute;
+            top: 160px;
+            left: 750px;
+        }
 
-		#but5 {
-			position: absolute;
-			top: 310px;
-			left: 400px;
-		}
+        #but5 {
+            position: absolute;
+            top: 310px;
+            left: 400px;
+        }
 
-		#but6 {
-			position: absolute;
-			top: 310px;
-			left: 600px;
-		}
-	</style>
-	<script>
-		function changeContent(description) {
-			document.getElementById("PnlDsc").innerHTML = "New text!";
-			alert(document.getElementById("PnlDsc").style.display) ;//="block";
-		}
-	</script>
+        #but6 {
+            position: absolute;
+            top: 310px;
+            left: 600px;
+        }
+        
+        .raise:hover,
+        .raise:focus {
+            box-shadow: 0 20px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0); 
+            transform: translateY(-0.25em);
+        }
+    </style>
+    <script>
+    </script>
 </head>
 
 <body>
-	<div class="left_">
-		<div class="tophome">
-		</div>
-		<div class="downhome">
-			<img src="Group10.jpg" width="90%" height="70%" />
-		</div>
+    <div class="left_">
+        <div class="tophome">
+        </div>
+        <div class="downhome">
+            <img src="Group10.jpg" width="90%" height="70%" />
+        </div>
 
-	</div>
-	<div class="right_">
-		<div class="topDesc" style="text-align: center;">
-			<p id="titldesc"> WEB-BASED MATHEMATICS TOOLS</p>
-		</div>
-		<div class="downhome">
-			<div Class="divbutton">
+    </div>
+    <div class="right_">
+        <div class="topDesc" style="text-align: center;">
+            <p id="titldesc"> WEB-BASED MATHEMATICS TOOLS</p>
+        </div>
+        <div class="downhome">
+            <div Class="divbutton">
 
-				<div>
-					<button onmouseover="changeContent('1')" id="but1" class="buttonhome btnmain" onclick="window.location.href='NumberSystemConversions.html'">Number system conversions</button>
-				</div>
-				<div>
-					<button id="but2" class="buttonhome btnmain" onclick="window.location.href='NumberSystemOutputs.html'">Number system outputs</button>
-				</div>
-				<div>
-					<button id="but3" class="buttonhome btnmain" onclick="window.location.href='Combinatorics.html'">Combinatorics</button>
-				</div>
-				<div>
-					<button id="but4" class="buttonhome btnmain" onclick="window.location.href='TruthTables.html'">Truth Tables</button>
-				</div>
-				<div>
-					<button id="but5" class="buttonhome btnmain" onclick="window.location.href='RandomValues.html'">Random values</button>
-				</div>
-				<div>
-					<button id="but6" class="buttonhome btnmain" onclick="window.location.href='Chess.html'">Chess</button>
-				</div>
-			</div>
-			<div class="divdesc">
-				<p id="PnlDsc">zsdlfkgzkdsf</p>
-			</div>
-		</div>
-	</div>
+                <div>
+                    <button id="but1" class="buttonhome btnmain raise" onclick="window.location.href='NumberSystemConversions.html'">Number system conversions</button>
+                </div>
+                <div>
+                    <button id="but2" class="buttonhome btnmain raise" onclick="window.location.href='NumberSystemOutputs.html'">Number system outputs</button>
+                </div>
+                <div>
+                    <button id="but3" class="buttonhome btnmain raise" onclick="window.location.href='Combinatorics.html'">Combinatorics</button>
+                </div>
+                <div>
+                    <button id="but4" class="buttonhome btnmain raise" onclick="window.location.href='TruthTables.html'">Truth Tables</button>
+                </div>
+                <div>
+                    <button id="but5" class="buttonhome btnmain raise" onclick="window.location.href='RandomValues.html'">Random values</button>
+                </div>
+                <div>
+                    <button id="but6" class="buttonhome btnmain raise" onclick="window.location.href='Chess.html'">Chess</button>
+                </div>
+            </div>
+            <div class="divdesc">
+                <p id="PnlDsc">zsdlfkgzkdsf</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
