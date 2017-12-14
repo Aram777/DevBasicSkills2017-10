@@ -55,13 +55,6 @@ function start_calc(starti, startj) {
     fCount = 0;
     
     moveknight(starti, startj);
-    /*
-    chesBoard.sort((function(index){
-        return function(a, b){
-            return (a[index] === b[index] ? 0 : (a[index] < b[index] ? -1 : 1));
-        };
-    })(1));
-    */
     for (i = 0; i < iMax; i++) {
         for (j = 0; j < iMax; j++) {
             document.getElementById("ChesBoard").rows[i].cells[j].innerHTML=chesBoard[i][j].toString();

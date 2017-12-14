@@ -5,6 +5,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<style>
+		.divbutton {
+			height: 80%;
+		}
+
+		.divdesc {
+			height: 20%;
+			display: none;
+		}
+
+
 		#titldesc {
 			background-color: #666666;
 			-webkit-background-clip: text;
@@ -53,22 +63,6 @@
 		}
 	</style>
 	<script>
-		/*		function setbutpos() {
-							let movescale = 5;
-							let by1 = 1;
-							let bu1 = document.getElementById("but1");
-							let orgb1 = bu1.style.top;
-							alert(orgb1);
-							while (true) {
-								if (bu1.style.top < orgb1 + 300) {
-									bu1.style.top = bu1.style.top + (movescale * by1);
-									by1++;
-								} else
-									break;
-							}
-
-						}
-						*/
 	</script>
 </head>
 
@@ -86,33 +80,32 @@
 			<p id="titldesc"> WEB-BASED MATHEMATICS TOOLS</p>
 		</div>
 		<div class="downhome">
-			<div>
-				<button id="but1" class="buttonhome btnmain" onclick="window.location.href='NumberSystemConversions.html'">Number system conversions</button>
-			</div>
-			<div>
-				<button id="but2" class="buttonhome btnmain" onclick="window.location.href='NumberSystemOutputs.html'">Number system outputs</button>
-			</div>
-			<div>
-				<button id="but3" class="buttonhome btnmain" onclick="window.location.href='Combinatorics.html'">Combinatorics</button>
+			<div Class="divbutton">
 
+				<div>
+					<button id="but1" class="buttonhome btnmain" onclick="window.location.href='NumberSystemConversions.html'">Number system conversions</button>
+				</div>
+				<div>
+					<button id="but2" class="buttonhome btnmain" onclick="window.location.href='NumberSystemOutputs.html'">Number system outputs</button>
+				</div>
+				<div>
+					<button id="but3" class="buttonhome btnmain" onclick="window.location.href='Combinatorics.html'">Combinatorics</button>
+				</div>
+				<div>
+					<button id="but4" class="buttonhome btnmain" onclick="window.location.href='TruthTables.html'">Truth Tables</button>
+				</div>
+				<div>
+					<button id="but5" class="buttonhome btnmain" onclick="window.location.href='RandomValues.html'">Random values</button>
+				</div>
+				<div>
+					<button id="but6" class="buttonhome btnmain" onclick="window.location.href='Chess.html'">Chess</button>
+				</div>
 			</div>
-			<div>
-				<button id="but4" class="buttonhome btnmain" onclick="window.location.href='TruthTables.html'">Truth Tables</button>
-
+			<div class="divdesc">
+				<p id="PnlDsc">zsdlfkgzkdsf</p>
 			</div>
-			<div>
-				<button id="but5" class="buttonhome btnmain" onclick="window.location.href='RandomValues.html'">Random values</button>
-
-			</div>
-			<div>
-				<button id="but6" class="buttonhome btnmain" onclick="window.location.href='Chess.html'">Chess</button>
-
-			</div>
-
 		</div>
-
 	</div>
-
 </body>
 
 </html>
