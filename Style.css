@@ -20,6 +20,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
 }
 
 buttonkeypad :disabled
@@ -88,4 +89,9 @@ buttonkeypad :disabled
 #divL {
     float: left;
     width: 50%
+}
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0); 
+    transform: translateY(-0.25em);
 }
