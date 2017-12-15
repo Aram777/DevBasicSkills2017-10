@@ -4,10 +4,29 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <style>
+    .button-Tbl {
+
+      width: 200px;
+      height: 50px;
+
+      background-image: url(CreateTableIcon.jpg);
+      background-color: #426744;
+      background-repeat: no-repeat;
+      background-position: 145px 0px;
+      margin-right: 30px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
     #NumberTable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
       width: 100%;
+      border: 1px solid black;
     }
 
     #NumberTable td,
@@ -86,21 +105,19 @@
         <h1>
           Number System Output
         </h1>
-        <p>This page  illustrates a table showing the list of 
-          values of decimals number system from 0-50 in binary,
-           octal and hexadecimal number systems.This table can help
-            a user to know the exact conversions value of decimals
-             number system to other kinds of number system. 
-           User can also clear the table using clear button on the page.</p>
+        <p>This page illustrates a table showing the list of values of decimals number system from 0-50 in binary, octal and
+          hexadecimal number systems.This table can help a user to know the exact conversions value of decimals number system
+          to other kinds of number system. User can also clear the table using clear button on the page.</p>
       </div>
     </div>
-    <div class="downhome" style="background-color:white">
+    <div class="downhome">
 
       <div style="text-align: center; margin-top: 20px">
-
-        <button id="btnCreat" onclick="createtable()"> Create Table </button>
-        <button id="btnClear" onclick="clearTable()"> Clear Table </button>
+        <button style="background-image: url(CreateTableIcon.jpg);" class="button-Tbl raise"  onclick="createtable()"> Create Table </button>
+        <button style="background-image: url(ClearTableIcon.jpg);" class="button-Tbl raise" onclick="clearTable()"> Clear Table </button>
         <br>
+      </div>
+      <div style="background-color: #d8def1;">
         <table id="NumberTable">
         </table>
       </div>
