@@ -46,24 +46,48 @@
         }
 
         function calcFunc() {
-            document.getElementById("resPan").innerHTML = "";
-            var x = document.getElementById("typesel").value;
-            var yy = document.getElementById("cmbsamp").value;
+            document.getElementById("resPan").value = "";
             var mFact = document.getElementById("mFact").value;
             var nFact = document.getElementById("nFact").value;
+            if (!parseInt(mFact)>0)
+            {
+                alert("Pleas Enter a number for M");
+                document.getElementById("mFact").value=0;
+                document.getElementById("mFact").focus();
+                return;
+
+            }
+            if (!parseInt(nFact)>0)
+            {
+                alert("Pleas Enter a number for N");
+                document.getElementById("nFact").value=0;
+                document.getElementById("nFact").focus();
+                return;
+
+            }
+            if (parseInt(nFact)>parseInt(mFact))
+            {
+                alert("N can not be greater than M");
+                document.getElementById("nFact").value=0;
+                document.getElementById("nFact").focus();
+                return;
+
+            }
+            var x = document.getElementById("typesel").value;
+            var yy = document.getElementById("cmbsamp").value;
             var diff = mFact - nFact;
             var result = 0;
             if (x == "combinations") {
                 result = factorial(mFact) / (factorial(nFact) * factorial(diff));
             } else {
                 if (yy == "WithRep") {
-                    result = Math.pow(mFact ,nFact );
+                    result = Math.pow(mFact, nFact);
 
                 } else {
                     result = factorial(mFact) / factorial(diff);
                 }
             }
-            document.getElementById("resPan").innerHTML = result.toString();
+            document.getElementById("resPan").value = result.toString();
 
         }
 
@@ -98,17 +122,15 @@
                 <h1>
                     Combinatorics
                 </h1>
-                <p>we calculate combination and permutation here in this page.A combination focuses on the 
-                       selection of objects without regard to the order in which they are selected. 
-                          A permutation, in contrast, focuses on the arrangement of objects with regard to the 
-                 order in which they are arranged.Here we can calculate the combination of m 
-                 objects taken n at a time.we can give values of m and n ourself and the 
-                 program calculates the values for permutation or combination.we can choose
-                  whether we are going to calculate permutation or combination.We can choose 
-                  either we are calculating  without replacement or with replacement.
+                <p>we calculate combination and permutation here in this page.A combination focuses on the selection of objects
+                    without regard to the order in which they are selected. A permutation, in contrast, focuses on the arrangement
+                    of objects with regard to the order in which they are arranged.Here we can calculate the combination
+                    of m objects taken n at a time.we can give values of m and n ourself and the program calculates the values
+                    for permutation or combination.we can choose whether we are going to calculate permutation or combination.We
+                    can choose either we are calculating without replacement or with replacement.
 
-        
-        </p>
+
+                </p>
             </div>
         </div>
         <div class="downhome">
@@ -117,27 +139,33 @@
             <div>
                 <div style="float:left; text-align: right; margin-top: 20px; width:33%">
                     <div style="display: inline-block;">
-                        <select id="typesel" onchange="chkFunc()">
+                        <select style="height: 30px;" id="typesel" onchange="chkFunc()">
                             <option value="permutations" selected>Permutations</option>
                             <option value="combinations">Combinations</option>
                         </select>
                         <br>
-                        <label class="lbltxt">Enter m</label>
+                        <br>
+                        <label for="mFact" class="lbltxt">Enter m</label>
+                        <br>
                         <br>
                         <label class="lbltxt">Enter n</label>
                         <br>
+                        <br>
                     </div>
                 </div>
-                <div style="float:left; text-align: left; margin-top: 25px; width:33%">
+                <div style="float:left; text-align: left; margin-top: 20px; width:33%">
                     <div style="display: inline-block;">
-                        <select name="sampling" id="cmbsamp" onchange="chngimg()">
+                        <select style="height: 30px;" name="sampling" id="cmbsamp" onchange="chngimg()">
                             <option value="WithRep" selected>with replacement</option>
                             <option value="WithoutRep">without replacement</option>
                         </select>
                         <br>
-                        <input type="number" id="mFact" onchange="clsfunc()">
                         <br>
-                        <input type="number" id="nFact" onchange="clsfunc()">
+                        <input style="height: 20px; width: 50px;" type="number" id="mFact" onchange="clsfunc()">
+                        <br>
+                        <br>
+                        <input style="height: 20px; width: 50px;" type="number" id="nFact" onchange="clsfunc()">
+                        <br>
                         <br>
                     </div>
                 </div>
@@ -146,14 +174,20 @@
                 </div>
             </div>
             <br>
-            <div style="float:left; text-align: center; margin-top: 25px; width:100%">
-                <br>
-                <button id="btnclc" onclick="calcFunc()">Calculate</button>
-                <br>
-                <div style=" resize: none; margin-top: 55px;">
-                        <label style=" width: 150px; border: 1px solid black; text-align: right;">Result:</label>
-                        <label id="resPan" style=" width: 160px; border: 1px solid black; text-align: left;"></label>
+            <div style="text-align: center; margin-top: 25px; width:100%; display: inline-block;">
+
+                <div style="text-align: right; width: 50%; float:left;">
+                    <label style="display: inline-block; width: 55px;  border: 1px solid black; text-align: right;">Result:</label>
                 </div>
+                <div style="text-align: left; width: 50%; float:left;">
+                    <input style=" margin-left: 10px; height: 20px;  width: 50px; border: 1px solid black;" type="text" id="resPan" disabled>
+
+                </div>
+                <br>
+                <div style="text-align: center; width: 100%; display: inline-block; margin-top: 20px;">
+                    <button style="background-image: url(Calculate.jpg);" id="btnclc" class="button-Pub raise" onclick="calcFunc()">Calculate</button>
+                </div>
+                <br>
             </div>
 
         </div>
