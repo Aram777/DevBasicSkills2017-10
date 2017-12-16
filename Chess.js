@@ -9,59 +9,83 @@ for (i = 0; i < iMax; i++) {
 var nextPosi = [-2, -2, -1, -1, 1, 1, 2, 2];
 var nextPosj = [-1, 1, -2, 2, -2, 2, -1, 1];
 var fCount = 0;
-/*moveknight(0, 0);
 
-for (i = 0; i < iMax; i++) {
-    for (j = 0; j < iMax; j++) {
-        process.stdout.write(i + " , " + j + " : " + chesBoard[i][j] + "  \n");
-    }
-}
-*/
 function createtable() {
     var table = document.getElementById("ChesBoard");
     var tt = 50;
-    for (let rowIndex = 0; rowIndex < iMax; rowIndex++) {
+    for (let rowIndex = 0; rowIndex <= iMax; rowIndex++) {
         row = table.insertRow(rowIndex);
-        for (let colIndex = 0; colIndex < iMax; colIndex++) {
+        for (let colIndex = 0; colIndex <= iMax; colIndex++) {
             let cell = row.insertCell(colIndex);
-            cell.style.width = tt.toString() + "px";
-            cell.style.height = tt.toString() + "px";
-            cell.onclick = function () {
-                start_calc(rowIndex, colIndex);
-            };
-
-            //cell.innerHTML = rowIndex.toString() + "," + colIndex.toString();
-            if (rowIndex % 2 == 0) {
-                if (colIndex % 2 == 0)
-                    cell.bgColor = "white";
-                else
-                    cell.bgColor = "darkgrey";
+            if ((rowIndex == 0) || (colIndex == 0)) {
+                if ((colIndex == 0) && (rowIndex == 0)) {
+                    cell.style.width = "20".toString() + "px";
+                    cell.style.height = "20".toString() + "px";
+                }
+                if ((rowIndex == 0) && (colIndex > 0)) {
+                    cell.style.width = tt.toString() + "px";
+                    cell.style.height = "20".toString() + "px";
+                    cell.innerHTML = colIndex.toString();
+                }
+                if ((colIndex == 0) && (rowIndex > 0)) {
+                    cell.style.width = "20".toString() + "px";
+                    cell.style.height = tt.toString() + "px";
+                    cell.innerHTML = rowIndex.toString();
+                }
             } else {
-                if (colIndex % 2 == 0)
-                    cell.bgColor = "darkgrey";
-                else
-                    cell.bgColor = "white";
+                cell.style.width = tt.toString() + "px";
+                cell.style.height = tt.toString() + "px";
+                cell.onclick = function () {
+                    start_calc(rowIndex - 1, colIndex - 1);
+                };
+                if (rowIndex % 2 == 0) {
+                    if (colIndex % 2 == 0)
+                        cell.bgColor = "white";
+                    else
+                        cell.bgColor = "darkgrey";
+                } else {
+                    if (colIndex % 2 == 0)
+                        cell.bgColor = "darkgrey";
+                    else
+                        cell.bgColor = "white";
+                }
             }
-
         }
     }
 }
+
+function clearTableContent() {
+    for (i = 1; i < iMax + 1; i++)
+        for (j = 1; j < iMax + 1; j++)
+            document.getElementById("ChesBoard").rows[i].cells[j].innerHTML = "";
+
+
+}
+
 function start_calc(starti, startj) {
+    clearTableContent();
     for (i = 0; i < iMax; i++) {
         chesBoard[i] = new Array(iMax);
         for (j = 0; j < iMax; j++)
             chesBoard[i][j] = 0;
     }
     fCount = 0;
-    
+
     moveknight(starti, startj);
-    for (i = 0; i < iMax; i++) {
-        for (j = 0; j < iMax; j++) {
-            document.getElementById("ChesBoard").rows[i].cells[j].innerHTML=chesBoard[i][j].toString();
+    if (chesBoard[0][0] > 0) {
+        for (i = 1; i < iMax + 1; i++) {
+            for (j = 1; j < iMax + 1; j++) {
+                document.getElementById("ChesBoard").rows[i].cells[j].innerHTML = chesBoard[i - 1][j - 1].toString();;
 
+            }
         }
+    } else {
+        var msg = "You choosed the cell " + (starti+1).toString() + " , " + (startj+1).toString() +
+            "\n But it's not possible to start from there" +
+            "\n Please select another cell by clicking on that";
+        alert(msg);
+        return;
     }
-
 }
 
 function moveknight(iim, jjm) {
@@ -80,6 +104,7 @@ function moveknight(iim, jjm) {
                 if (chesBoard[nexti][nextj] == 0) {
                     fCount++;
                     chesBoard[iim][jjm] = fCount;
+                    
                     if (fCount < MaxCount) {
                         moveknight(nexti, nextj);
                         if (fCount >= MaxCount)
