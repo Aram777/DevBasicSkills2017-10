@@ -37,7 +37,7 @@
             for (let index = 0; index < maxloop; index++) {
                 let xxx = Math.floor(Math.random()*(maxNum-minNum+1)+minNum);
                 //let xxx = Math.floor((Math.random() * 100) + 1);
-                randnumclass[Math.floor(xxx / 10) - 1]++;
+                randnumclass[Math.floor((xxx-1) / 10)]++;
 
             }
             series1.dataPoints = [];
@@ -71,8 +71,9 @@
                 <h1>
                     Random Values
                 </h1>
-                <p>Please input a number in a blank box to see the Random Number Distribution.<br>
-                    You will graphically see the solution when you click <b>Generate Random Numbers</b> </p>
+                <p>This is the definition of random number generation. 
+                    Users have to input a number greater than 0 to execute the random number generation. 
+                    The results are shown graphically with specifying values in discrete frequency distribution.</b> </p>
             </div>
         </div>
         <div class="downhome">
